@@ -5,12 +5,12 @@ jobs:
     runs-on: ubuntu-latest
     container: devkitpro/devkitppc
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
       - name: Derle
         run: |
-          make
+       
       - name: Dosyayi Kaydet
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v4
         with:
           name: ftf-wii-oyunu
           path: *.dol
