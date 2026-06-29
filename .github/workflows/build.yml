@@ -1,5 +1,7 @@
 name: Wii Derleme
+
 on: [push]
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -8,10 +10,9 @@ jobs:
       - uses: actions/checkout@v4
       - name: Derle
         run: |
-       
+          make
       - name: Dosyayi Kaydet
         uses: actions/upload-artifact@v4
         with:
           name: ftf-wii-oyunu
           path: *.dol
-          
